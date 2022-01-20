@@ -18,12 +18,10 @@ console.log(uppercaseFruits)
 // Exercise 2: Capitalize the first letter of every city. 
 const cities = ['miami', 'barcelona', 'madrid', 'amsterdam', 'berlin', 'sao paulo', 'lisbon', 'mexico city']
 
-let uppercaseCities = (str) => {
-   return str.charAt(0).toUpperCase()
-}
-const cities1 = cities.map(uppercaseCities)
 
-console.log(cities)
+let uppercaseCities = cities.map(first => first[0].toUpperCase() + first.slice(1))
+
+console.log(uppercaseCities);
 // Answer should be 
 // [ 'Miami', 'Barcelona', 'Madrid', 'Amsterdam', 'Berlin', 'Sao paulo', 'Lisbon', 'Mexico city', 'Paris' ]
 
