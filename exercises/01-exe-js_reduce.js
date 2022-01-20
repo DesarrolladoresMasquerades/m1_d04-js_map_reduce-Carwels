@@ -20,7 +20,7 @@ const data = [
 function totalpopulation(arr) {
    // since we are calculating total, initial value of accumulator is set to 0
    let total = arr.reduce((acc, elem) => {
-     //your code here...
+     
    }, 0)
   return total;
 }
