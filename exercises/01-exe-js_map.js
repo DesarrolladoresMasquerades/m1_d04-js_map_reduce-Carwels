@@ -39,11 +39,10 @@ const info = {
 }
 
 
-const getRestaurantsNames = (arr) => {
-   //your code here...
-}
-
-let restaurantsNames = getRestaurantsNames( /* pass your array here*/)
+const getRestaurantsNames = (arr) => { return arr.map( ( restaurant) => restaurant.name) }
+const restaurantsNames = getRestaurantsNames( info.cities )
 console.log(restaurantsNames)
+
+
 
 // Answer should be [ 'Mirazur', 'Noma', 'Gaggan', 'Geranium', 'Arpège']

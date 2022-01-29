@@ -17,20 +17,9 @@ const data = [
   }
 ]
 
-function totalpopulation(arr) {
-   // since we are calculating total, initial value of accumulator is set to 0
-   let total = arr.reduce((acc, elem) => {
-     
-   }, 0)
-  return total;
-}
+const totalPopulation = data.reduce((acc, currentValue) => acc + currentValue.pop, 0)
 
-//Invoking and running the function
-let total = totalpopulation(data)
-console.log(total) //Answer should be 478
-
-let output = totalpopulation([])
-console.log(output) //Answer should be 0
+console.log("totalPopulation: " + totalPopulation)
 
 
 // Exercise 2: Given a menu of foods and their calories, 
@@ -49,20 +38,14 @@ const menu = [
   { name: 'Pizza', calories: 520.124 }
 ];
 
-function calAvgCalories(arr) {
-   // your code here...
+const totalCalories = menu.reduce((acc, currentValue1) => acc + currentValue1.calories, 0)
+const averageCalories = totalCalories / menu.length
+console.log(averageCalories)
 
-}
 
-// Invoking and running the function
-let total = calAvgCalories(menu)
-console.log(total) // Answer should be 208.29 
-
-let output = calAvgCalories([])
-console.log(output) // Answer should be 0
 
 // Extra practice: exercise3: Refactor your above code to calculate average if the calories were in strings
-const menu = [
+const menu1 = [
   { name: 'Carrots', calories: "150.45" },
   { name: 'Steak'},
   { name: 'Broccoli', calories: "120.2342" },
@@ -70,13 +53,3 @@ const menu = [
   { name: 'Pizza', calories: "520.124" }
 ];
 
-function calAvgCalories(arr) {
-   // your code here...
-}
-
-// Invoking and running the function
-let total = calAvgCalories(menu)
-console.log(total) // Answer should be 208.29 
-
-let output = calAvgCalories([])
-console.log(output) // Answer should be 0
